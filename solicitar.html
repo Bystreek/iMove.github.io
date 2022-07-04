@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> iMove | Solicitar </title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+    </header>
+
+    <div class="menu__side" id="menu_side">
+
+        <div class="name__page">
+            <img src="img/JohnnySins.jpg">
+            <h4>@JohnySins</h4>
+        </div>
+
+        <div class="options__menu">	
+
+            <a href="index.html" >
+                <div class="option">
+                    <i class="fas fa-home" title="Inicio"></i>
+                    <h4>Inicio</h4>
+                </div>
+            </a>
+            <a href="solicitar.html" class="selected">
+                <div class="option">
+                    <i class="fa-solid fa-taxi" title="Solicitar Servicio"></i>
+                    <h4>Solicitar Servicio</h4>
+                </div>
+            </a>
+            
+            <a href="#">
+                <div class="option">
+                    <i class="fa-regular fa-calendar-days" title="Reservar Servicio"></i>
+                    <h4>Reservar Servicio</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fa-solid fa-wrench" class="Soporte"></i>
+                    <h4>Soporte</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fa-brands fa-cc-visa" title="Afiliar Tarjeta"></i>
+                    <h4>Afiliar Tarjeta</h4>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="fa-solid fa-gear" title="Ajustes"></i>
+                    <h4>Ajustes</h4>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+  <div class="container__reg">
+
+<form action="" method="POST" id="form">
+        <div class="form">
+            <h1>SOLICITAR SERVICIO</h1><br><br>
+            <h3>Tipo de servicio:</h3>
+        <div class="form">
+            <div class="grupo">
+
+            <select name="tipo">
+            <option value="0">Vehiculo Particular</option>
+            <option value="1">Autobus Privado</option>
+         
+                </select> 
+
+            </div>
+        </div>
+        <h3>Tiempo de llegada:</h3>
+        <div class="form">
+            <div class="grupo">
+            <select name="tipo">
+            <option value="0">Lo más pronto posible</option>
+            <option value="1">30 minutos</option>
+            <option value="2">60 minutos</option>
+            <option value="3">90 minutos</option> 
+            <option value="4">120 minutos</option>
+         
+                </select> 
+
+            </div>
+        </div>
+
+            <div class="grupo">
+                <input type="number" id="name"><span class="barra"></span>
+                <label>Cantidad de personas:</label>
+            </div>
+        </div>
+    <div class="form">
+            <div class="grupo">
+                <input type="text" id="email"><span class="barra"></span>
+                <label>Notas:</label>
+            </div>
+        </div>
+        <div class="form">
+            <div class="grupo">
+                <input type="password" id="password"><span class="barra"></span>
+                <label>Clave:</label>
+            </div>
+        </div>
+
+        <button type="submit"> <a href="solicitar_2.html">iMove</a> </button>
+        <p class="warnings" id="warnings"></p>
+    </form>
+
+</div>
+    
+    <script src="js/script.js"></script>
+
+
+
+
+</body>
+</html>

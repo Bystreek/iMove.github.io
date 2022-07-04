@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin-left: 80px;
+    margin-top: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+main{
+    padding: 20px;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.icon__menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.icon__menu img{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu__side{
+    width: 80px;
+    height: 100%;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #09203f;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar{
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name__page img{
+    width: 40px;
+    border-radius: 60%;
+    margin-right: 20px;
+    margin-left: -12px;
+}
+
+.name__page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.options__menu a{
+    color: #ffffffb2;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.options__menu a:hover{
+    color: white;
+}
+
+.options__menu .option{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.options__menu .option h4{
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected{
+    color: #fff;
+}
+
+.selected:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/*Clases para usar en JavaScript*/
+
+.body_move{
+    margin-left: 250px;
+}
+
+.menu__side_move{
+    width: 250px;
+}
+
+
+@media screen and (max-width: 760px){
+    .body_move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+
+
+}
+
+/* SOLICITAR */
+
+root{
+
+ --display--color: linear-gradient(to top, #09203f 0%, #537895 100%);
+ --display--colorhover1: linear-gradient(to top, #09203f 0%, #537895 100%);
+ --display--background: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.container__reg{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+h1{
+
+    text-align: center;
+    font-weight: 700;
+
+}
+
+h3{
+
+
+    text-align: center;
+}
+
+form{
+
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+input{
+background: none;
+color: white;
+font-size: 18px;
+padding: 10px 10px 10px 5px;
+display: block;
+width: 100%;
+border: none;
+border-bottom: 1px solid black;
+}
+
+input:focus{
+
+    outline: none;
+    color: white;
+
+}
+
+label{
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label{
+    top: -14px;
+    font-size: 12px;
+    color: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+
+.barra{
+position: relative;
+display: block;
+width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background-color: linear-gradient(to top, #09203f 0%, #537895 100%);;
+    transition: 0.6s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before{
+width: 100%;
+    
+}
+
+button{
+font-family: roboto;
+background: linear-gradient(to top, #09203f 0%, #537895 100%);;
+border: none;
+display: block;
+width: 80%;
+margin: 10px auto;
+color: white;
+height: 40px;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 0 5px white;
+}
+
+button a{
+
+color: white;
+
+}
+
+button:hover{
+
+    background: #565586;
+
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #FF0000;
+    padding-top: 20px;
+
+}
+
+/* RECIBO */
+
+.recibo{
+width: 30%;
+border: 1px solid black;
+border-radius: 6%;
+height: 450px;
+margin: auto;
+background-image:linear-gradient(to top, #09203f 0%, #537895 100%);;
+margin-top: 120px;
+text-shadow: 0 0 2px white;
+}
+
+.recibo p{
+
+margin-top: 30px;
+padding: 5px;
+font-size: 18px;
+color:  black;
+font-family: arial;
+line-height: 1.5em;
+}
+
+.recibo h2{
+
+padding-left: 3px;
+font-size: 18px;
+text-shadow: 0 0 2px white;
+
+}
+
+/* RECIBO FINAL */
+
+.recibo__final{
+
+width: 50%;
+border: 1px solid black;
+border-radius: 6%;
+height: 350px;
+margin: auto;
+background-image:linear-gradient(to top, #09203f 0%, #537895 100%);;
+margin-top: 120px;
+text-shadow: 0 0 2px white;
+position: relative;
+
+}
+.recibo__final{
+
+text-align: center;
+
+}
+
+.recibo__final img{
+    
+    width: 100%;
+   
+}
